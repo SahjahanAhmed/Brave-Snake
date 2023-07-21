@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+.board {
+  max-height: 300px;
+  max-width: 300px;
+  margin: auto;
+  min-height: 300px;
+  min-width: 300px;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  background-color: green;
+}
+
+.head {
+  background: red;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 -2px 0 0 purple inset;
+}
+
+.head::before {
+  content: 'o o';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  color: white;
+  font-size: 4px;
+}
+
+.head::after {
+  content: 'v';
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: -10px;
+  color: black;
+  font-size: 10px;
+  animation: snakeLipsBlink .2s linear infinite;
+}
+
+@keyframes snakeLipsBlink {
+  from {
+    top: -4px;
+  }
+
+  to {
+    top: -10px;
+  }
+}
+
+.snake {
+  background: purple;
+  border-radius: 2px;
+
+}
+
+.food {
+  background: yellow;
+  border-radius: 2px;
+
+}
+
+.keys {
+  position: relative;
+  min-width: 300px;
+  min-height: 200px;
+  max-height: 200px;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 18px;
+}
+
+.key {
+  position: absolute;
+  font-size: 25px;
+  border: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.key:focus {
+  background: green;
+  color: white
+}
+
+.keys>button:nth-of-type(1) {
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.keys>button:nth-of-type(2) {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+}
+
+.keys>button:nth-of-type(3) {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+}
+
+.keys>button:nth-of-type(4) {
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+#pauseBtn,
+#playBtn {
+  font-size: 22px;
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .4);
+  padding: 6px;
+  border-radius: 10px;
+}
+#playBtn:hover{background: green;}
+#pauseBtn:hover{background: green;}
+
+.top{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+  
+}
+.top > div:nth-of-type(1){
+  display: flex;
+justify-content: space-between;
+  padding: 4px 10px;
+}
+.top > h2{
+  text-align: center;
+}
+#select-speed{
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  margin: 4px;
+}

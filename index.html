@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Brave Snake</title>
+</head>
+<body>
+<div class="top">
+<h2>Brave Snake</h1>
+<div>
+  
+  <span id="scoreEl"></span>
+  <select id="select-speed">
+    <option value="normal">Normal</option>
+    <option value="slow">Slow</option>
+    <option value="medium">Medium</option>
+    <option value="fast">Fast</option>
+    <option value="fastest">Fastest</option>
+    </select>
+</div>
+    
+</div>
+  
+  <div class="board" id="board">
+  </div>
+  <div class="keys">
+    <button class="key" id="up"><i class="fa-solid fa-chevron-up"></i></button>
+    <button class="key" id="left"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="key" id="right"><i class="fa-solid fa-chevron-right"></i></button>
+    <button class="key" id="down"><i class="fa-solid fa-chevron-down"></i></button>
+    <div class="buttons">
+    
+      <button id="pauseBtn">pause</button>
+      <button id="playBtn">play</button>
+    </div>
+  </div>
+</body>
+</html>
